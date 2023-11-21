@@ -12,10 +12,14 @@ fn foo_if_fizz(fizzish: felt252) -> felt252 {
     // 'fizz', return 'foo'
     // 'fuzz', return 'bar'
     // anything else, return 'baz'
+    
     if fizzish == 'fizz' {
         'foo'
-    } else {
-        1_u32
+    } else if fizzish == 'fuzz' {
+        'bar'
+    }
+    else {
+        'baz'
     }
 }
 
